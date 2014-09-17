@@ -15,8 +15,8 @@ public class AndroidContactTest extends BaseParpare{
         WebElement el = driver.findElement(By.name("Add Contact"));
         el.click();
         List<WebElement> textFieldsList = driver.findElementsByClassName("android.widget.EditText");
-        textFieldsList.get(0).sendKeys("Some Name");
-        textFieldsList.get(2).sendKeys("Some@example.com");
+        textFieldsList.get(0).sendKeys("jame");
+        textFieldsList.get(2).sendKeys("398733146@qq.com");
         driver.swipe(100, 500, 100, 100, 2);
         driver.findElementByName("Save").click();
     }
