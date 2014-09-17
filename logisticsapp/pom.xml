@@ -2,11 +2,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.incito</groupId>
-	<artifactId>logisticsweb</artifactId>
+	<artifactId>logisticsapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
-	<name>logistics</name>
-	<url>http://maven.apache.org</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -105,10 +102,16 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.1</version>
+				<version>2.3.2</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<source>1.7</source>
 					<target>1.7</target>
+					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -119,7 +122,7 @@
 					<!-- 解决用maven执行test时 日志乱码的问题，详见：http://www.cnblogs.com/discuss/archive/2010/10/27/1862225.html -->
 					<argLine>-Dfile.encoding=UTF-8</argLine>
 					<suiteXmlFiles>
-						<suiteXmlFile>runAll.xml</suiteXmlFile>
+						<suiteXmlFile>runSingle.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<!--定义maven运行测试生成的报表路径 -->
 					<reportsDirectory>./result/test-report</reportsDirectory>
@@ -128,7 +131,7 @@
 
 		</plugins>
 	</build>
-		<repositories>
+	<repositories>
 		<repository>
 			<id>saucelabs-repository</id>
 			<url>https://repository-saucelabs.forge.cloudbees.com/release</url>
